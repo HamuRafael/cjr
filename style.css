@@ -116,7 +116,7 @@ header {
     border-radius: 20px;
     backdrop-filter: blur(20px);
     box-shadow: 0 0 30px rgba(0, 0, 0, .5);
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     overflow: hidden; 
@@ -126,9 +126,15 @@ header {
    
 }
 
+.wrapper.visible {
+  display: flex;
+}
+
 .home-content{
     text-align: center;
     color: #fff;
+    display: none;
+    visibility: hidden;
     
     
     border-radius: 10px;
@@ -315,4 +321,9 @@ h1 {
 }
 .login-register p a:hover{
     text-decoration: underline;
+}
+
+.home-content.visible {
+  display: block;
+  visibility: visible;
 }

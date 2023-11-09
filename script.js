@@ -1,5 +1,5 @@
 const wrapper = document.querySelector('.wrapper');
-const hometext = document.querySelector('.home-text');
+const hometext = document.querySelector('.home-content');
 const loginLink = document.querySelector('.login-link');
 const registerLink = document.querySelector('.register-link');
 const btnPopup = document.querySelector('.btnLogin-popup');
@@ -23,9 +23,12 @@ loginLink.addEventListener('click', ()=>{ // pra voltar pra tela de login
 });
 btnHome.addEventListener('click', ()=>{ //clica no botao la em cima home fazendo login sumir
     wrapper.classList.add('active-popup');
+    wrapper.classList.remove('visible');
+    hometext.classList.add('visible')
 });
 btnPopup.addEventListener('click', ()=>{ //clica no botao la em cima login fazendo login aparecer
     wrapper.classList.remove('active-popup');
+    wrapper.classList.add('visible');
+    hometext.classList.remove('visible')
 });
-
 
