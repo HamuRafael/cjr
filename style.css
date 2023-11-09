@@ -121,22 +121,16 @@ header {
     align-items: center;
     overflow: hidden; 
     transform: scale(1); /* deixa o login apagado */
-    transition: transform, .5s ease, height .2s ease;
-   
-   
 }
 
 .wrapper.visible {
   display: flex;
 }
-
 .home-content{
     text-align: center;
     color: #fff;
     display: none;
     visibility: hidden;
-    
-    
     border-radius: 10px;
     font-size: 1em;
     
@@ -147,22 +141,33 @@ h1 {
     
     
 }
-
-.wrapper .active-popup.home-content{
-    transition: none;
-    transform: translateX(-400px);
-    background-color: black;
-
+.home-content.visible {
+  display: flex;
+  visibility: visible;
 }
 
+
+.about{
+    text-align: center;
+    color: #fff;
+    display: none;
+    visibility: hidden;
+    transform: translate(50px);
+    border-radius: 10px;
+    font-size: 1em;
+    
+}
+.about.visible-about{
+    display: block;
+    visibility: visible;
+    
+
+}
 .wrapper.active-popup{ /* trabalha com o botao de login em cima */
     transform: scale(0);
 
 }
-.wrapper.active-popup.home-content{
-    
-    transform: translateX(-400px);
-}
+
 
 .wrapper.active{
     height: 520px;
@@ -323,7 +328,3 @@ h1 {
     text-decoration: underline;
 }
 
-.home-content.visible {
-  display: block;
-  visibility: visible;
-}

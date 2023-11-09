@@ -6,7 +6,8 @@ const btnPopup = document.querySelector('.btnLogin-popup');
 const btnHome = document.querySelector('.btnHome');
 const MissPassword = document.querySelector('.miss-password');
 const loginLinkS = document.querySelector('.logins-link');
-
+const AboutBtn = document.querySelector('.btnSobre');
+const aboutcontent = document.querySelector('.about');
 MissPassword.addEventListener('click',()=>{ // pra clicar no esqueci a senha
     wrapper.classList.add('misspass'); 
 });
@@ -25,10 +26,22 @@ btnHome.addEventListener('click', ()=>{ //clica no botao la em cima home fazendo
     wrapper.classList.add('active-popup');
     wrapper.classList.remove('visible');
     hometext.classList.add('visible')
+    aboutcontent.classList.remove('visible-about');
 });
 btnPopup.addEventListener('click', ()=>{ //clica no botao la em cima login fazendo login aparecer
     wrapper.classList.remove('active-popup');
     wrapper.classList.add('visible');
     hometext.classList.remove('visible')
+    aboutcontent.classList.remove('visible-about');
+
+});
+AboutBtn.addEventListener('click',()=>{
+    aboutcontent.classList.add('visible-about');
+    wrapper.classList.add('active-popup');
+    hometext.classList.remove('visible');
+    
+    
+
+    
 });
 
